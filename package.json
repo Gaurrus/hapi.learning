@@ -1,0 +1,12 @@
+{
+  "name": "hapi-server",
+  "version": "1.0.0",
+  "description": "API server",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon -e html,hbs,js server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
