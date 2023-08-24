@@ -1,4 +1,4 @@
-const { getUsers } = require('../handlers/get-users');
+const { getUsers } = require('../dbconfig');
 
 module.exports.routes = [
   {
@@ -6,6 +6,15 @@ module.exports.routes = [
     path: '/',
     handler: (request, h) => {
       return h.file('login.html');
+    },
+  },
+  {
+    method: 'GET',
+    path: '/users',
+    handler: async (request, h) => {
+      const data = await getUsers();
+      console.log(data);
+      return h.view('users', { data });
     },
   },
   {
