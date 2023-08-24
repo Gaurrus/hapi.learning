@@ -20,7 +20,7 @@ const startServer = async () => {
 
   server.views({
     engines: {
-      html: handlebars,
+      hbs: handlebars,
     },
     path: path.join(__dirname, 'views'),
   });
